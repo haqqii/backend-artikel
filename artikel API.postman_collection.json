@@ -1,0 +1,773 @@
+{
+	"info": {
+		"_postman_id": "d2314577-b9f3-4365-bc99-b23d43cda943",
+		"name": "artikel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15698891"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "ADD USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Loha2\",\r\n    \"password\": \"halo2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD USER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Amri\",\r\n    \"email\": \"amri@amri.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-oNJKtFKIuseF07uH2VJf2kjS/8M\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 09:00:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"affectedRows\": 1,\n        \"insertId\": 2,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"loha2\",\r\n    \"password\": \"halo2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LOGIN",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Amri\",\r\n    \"password\": \"halohalo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5004/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-LtBIKUP1Kdr5X+RAMsACpMQXmkw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 14:09:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBbXJpIiwiaWF0IjoxNjYyMTI3NzY4LCJleHAiOjE2NjIxMjk1Njh9.pN-ayZcFwBLJAvqTZ88_VVWxRST73oxspomsQrQ0UDE\",\n        \"expiresAt\": \"2022-09-02 21:39:28\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET USER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5004/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5004",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1655"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"677-oeThgolbJsVuYq9WsUuMoINpq8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Sep 2022 02:25:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"username\": \"Amri\",\n            \"password\": \"$2b$10$iXbErVt06.ij23PJQspqGu52x860HL5YKBtIUxiyT68yBMkCQ2Ya2\",\n            \"created_at\": \"2022-09-02T14:06:47.000Z\",\n            \"updated_at\": \"2022-09-02T14:06:47.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"username\": \"Loha\",\n            \"password\": \"$2b$10$CLuAKotpVr6UI/f8ckQGL.zP3ePmBNtR1Ch1FwT9BsmoKaIC1q0/S\",\n            \"created_at\": \"2022-09-02T16:35:29.000Z\",\n            \"updated_at\": \"2022-09-02T16:35:29.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"username\": \"loha\",\n            \"password\": \"$2b$10$JS/tf6xZE0bN2JvTg5JmQefxYeLqGhvQMcVyZfHYb/mmdl9In8g1W\",\n            \"created_at\": \"2022-09-03T02:18:55.000Z\",\n            \"updated_at\": \"2022-09-03T02:18:55.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"username\": \"Loha\",\n            \"password\": \"$2b$10$69UyKPxhMBSSOsifnbvLreytLv6/eZJoA3rb5DEJoIfIYQ6TBFtou\",\n            \"created_at\": \"2022-09-03T02:19:06.000Z\",\n            \"updated_at\": \"2022-09-03T02:19:06.000Z\"\n        },\n        {\n            \"id\": 5,\n            \"username\": \"loha\",\n            \"password\": \"$2b$10$OyK7Abx5k7qwQGNUdcmlEOm5LesNvK/S1iSbUrds51tFbZlbp7HhS\",\n            \"created_at\": \"2022-09-03T02:19:43.000Z\",\n            \"updated_at\": \"2022-09-03T02:19:43.000Z\"\n        },\n        {\n            \"id\": 6,\n            \"username\": \"Loha\",\n            \"password\": \"$2b$10$LGBncOWP0dUCfXgpr0e/PuSKflMmtByeFF3nbdKcpOigQTSv.JY..\",\n            \"created_at\": \"2022-09-03T02:19:57.000Z\",\n            \"updated_at\": \"2022-09-03T02:19:57.000Z\"\n        },\n        {\n            \"id\": 7,\n            \"username\": \"Loha2\",\n            \"password\": \"$2b$10$ZZY9x78huhcZoWxxSZ25POZuZ8LeGXhkhfqAr3s0G.EmMsuXcoI2S\",\n            \"created_at\": \"2022-09-03T02:20:21.000Z\",\n            \"updated_at\": \"2022-09-03T02:20:21.000Z\"\n        },\n        {\n            \"id\": 8,\n            \"username\": \"loha\",\n            \"password\": \"$2b$10$26khz/aFlssuuq5vyZXORem4KnLWH4Fz4RVsKTB/ofYuzbACGK9Ki\",\n            \"created_at\": \"2022-09-03T02:21:10.000Z\",\n            \"updated_at\": \"2022-09-03T02:21:10.000Z\"\n        },\n        {\n            \"id\": 9,\n            \"username\": \"loha2\",\n            \"password\": \"$2b$10$/v14NOb2AWxIlCQTtv65a.hyH3iVV7PY6Avyv87Er.E9fb5BBzKDe\",\n            \"created_at\": \"2022-09-03T02:23:37.000Z\",\n            \"updated_at\": \"2022-09-03T02:23:37.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ARTICLE",
+			"item": [
+				{
+					"name": "ADD ARTICLE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJMb2hhIiwiaWF0IjoxNjYyMTYxOTcxLCJleHAiOjE2NjIxNjM3NzF9.WACw24LNpmxh-imK8ursb924dWKV8qc6keONGcDpet4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"judul_artikel\": \"Judul sb\",\r\n    \"deskripsi\": \"Desc 4d\",\r\n    \"id_user\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD ARTICLE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Judul A\",\r\n    \"description\": \"Desc A\",\r\n    \"id_user\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/articles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-C+8JkVEU7RgztYMo16QrmyLeGXk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 13:13:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"affectedRows\": 1,\n        \"insertId\": 3,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "EDIT ARTICLE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"title baru\",\r\n    \"description\": \"desc baru\",\r\n    \"id_user\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "EDIT ARTICLE",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"title baru\",\r\n    \"description\": \"desc baru\",\r\n    \"id_user\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/articles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-B+6S/VkJmv5H97XCl1rsVkcFfT8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 11:56:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE ARTICLE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/articles/:id",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"articles",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "DELETE ARTICLE",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/articles/:id",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"articles",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-B+6S/VkJmv5H97XCl1rsVkcFfT8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 12:29:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ARTICLE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/articles",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET ARTICLE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/articles",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"articles"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "html",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 03 Sep 2022 02:06:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>Error</title>\n    </head>\n    <body>\n        <pre>Cannot GET //api/articles</pre>\n    </body>\n</html>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "COMMENT",
+			"item": [
+				{
+					"name": "ADD COMMENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isi_komen\": \"ini menyenangkan\",\r\n    \"id_user\": 2,\r\n    \"id_article\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ADD COMMENT",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"content\": \"ini menyenangkan\",\r\n    \"id_user\": 2,\r\n    \"id_article\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/comments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-L/ACF79jzESYjVnvl681bZrTdNI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Sep 2022 09:23:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {\n        \"affectedRows\": 1,\n        \"insertId\": 1,\n        \"warningStatus\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "GET COMMMENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/comments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET COMMMENT",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/comments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
